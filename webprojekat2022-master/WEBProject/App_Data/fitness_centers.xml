@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfFitnessCenter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FitnessCenter>
+    <Id>fc1</Id>
+    <Name>Best fitness center</Name>
+    <Address>Random Address 123 Novi Sad</Address>
+    <FoundedIn>2012</FoundedIn>
+    <OwnerId>owner</OwnerId>
+    <MonthlyFee>60</MonthlyFee>
+    <YearlyFee>200</YearlyFee>
+    <SingleSessionFee>10</SingleSessionFee>
+    <GroupSessionFee>50</GroupSessionFee>
+    <SingleSessionTrainerFee>15</SingleSessionTrainerFee>
+    <IsDeleted>false</IsDeleted>
+  </FitnessCenter>
+  <FitnessCenter>
+    <Id>fc2</Id>
+    <Name>Not the best fitness center</Name>
+    <Address>Bulevar Oslobodjenja 222 Novi Sad</Address>
+    <FoundedIn>2018</FoundedIn>
+    <OwnerId>owner1</OwnerId>
+    <MonthlyFee>60</MonthlyFee>
+    <YearlyFee>200</YearlyFee>
+    <SingleSessionFee>10</SingleSessionFee>
+    <GroupSessionFee>50</GroupSessionFee>
+    <SingleSessionTrainerFee>15</SingleSessionTrainerFee>
+    <IsDeleted>false</IsDeleted>
+  </FitnessCenter>
+  <FitnessCenter>
+    <Id>0d253ad2-e706-4679-a7d7-749837ca4aa9</Id>
+    <Name>new center 123</Name>
+    <Address>adresa</Address>
+    <FoundedIn>2015</FoundedIn>
+    <OwnerId>owner</OwnerId>
+    <MonthlyFee>10</MonthlyFee>
+    <YearlyFee>10</YearlyFee>
+    <SingleSessionFee>10</SingleSessionFee>
+    <GroupSessionFee>10</GroupSessionFee>
+    <SingleSessionTrainerFee>10</SingleSessionTrainerFee>
+    <IsDeleted>false</IsDeleted>
+  </FitnessCenter>
+</ArrayOfFitnessCenter>

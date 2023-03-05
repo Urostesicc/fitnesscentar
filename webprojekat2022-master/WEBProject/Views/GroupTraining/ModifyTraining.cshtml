@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "ModifyTraining";
+    Layout = "~/Views/Shared/_TrainerLayout.cshtml";
+}
+@using WEBProject.Models
+@model GroupTraining
+<h2>ModifyTraining</h2>
+
+<form action="/GroupTraining/ModifyGroupTraining" id="regForm" method="post">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" value="@Model.Name" required/>
+    </div>
+    <div class="form-group">
+        <label for="trainingType">Training type</label>
+        <input type="text" class="form-control" id="trainingType" name="trainingType" placeholder="Type" value="@Model.Name" required/>
+    </div>
+    <div class="form-group">
+        <label for="trainingLength">Training length(min)</label>
+        <input type="number" class="form-control" id="trainingLength" name="trainingLength" value="@Model.TrainingLength" min="0" required/>
+    </div>
+    <div class="form-group">
+        <label for="trainingDate">Training date</label>
+        <input type="datetime" class="form-control" id="trainingDate" name="trainingDate" value="@Model.TrainingDate" required/>
+    </div>
+    <div class="form-group">
+        <label for="maxVisitors">Max visitors</label>
+        <input type="number" class="form-control" id="maxVisitors" name="maxVisitors" value="@Model.MaxVisitors" min="0" required/>
+    </div>
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <input type="hidden" name="FitnessCenterId" value="@Model.FitnessCenterId" />
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Modify training" />
+    </div>
+</form>

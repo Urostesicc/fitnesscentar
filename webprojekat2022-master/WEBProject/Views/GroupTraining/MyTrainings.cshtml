@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "MyTrainings";
+    Layout = "~/Views/Shared/_VisitorLayout.cshtml";
+
+}
+@using WEBProject.Models
+@model List<GroupTraining>
+<h2>MyTrainings</h2>
+
+
+
+Future trainings
+<table class="table table-striped table-hover table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Max visitors</th>
+            <th scope="col">Training date</th>
+            <th scope="col">Training length</th>
+            <th scope="col">Training type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var gt in Model)
+        {
+            if (gt.TrainingDate > DateTime.Now)
+            {
+                <tr>
+                    <td>@gt.Name</td>
+                    <td>@gt.MaxVisitors</td>
+                    <td>@gt.TrainingDate</td>
+                    <td>@gt.TrainingLength</td>
+                    <td>@gt.TrainingType</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<br />
+Finished trainings
+<table class="table table-striped table-hover table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Max visitors</th>
+            <th scope="col">Training date</th>
+            <th scope="col">Training length</th>
+            <th scope="col">Training type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var gt in Model)
+        {
+            if (gt.TrainingDate < DateTime.Now)
+            {
+                <tr>
+                    <td>@gt.Name</td>
+                    <td>@gt.MaxVisitors</td>
+                    <td>@gt.TrainingDate</td>
+                    <td>@gt.TrainingLength</td>
+                    <td>@gt.TrainingType</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "DetailsView";
+    Layout = "~/Views/Shared/_VisitorLayout.cshtml";
+}
+@using WEBProject.Models
+@model FitnessCenter
+@{
+    List<GroupTraining> trainings = ViewData["Trainings"] as List<GroupTraining>;
+    List<Comment> comments = ViewData["Comments"] as List<Comment>;
+}
+<div class="panel panel-default">
+    <div class="panel-heading">@Model.Name</div>
+    <div class="panel-body">
+        <p>Address: @Model.Address</p>
+        <p>Single session price: @Model.SingleSessionFee</p>
+        <p>Single session price (with trainer): @Model.SingleSessionTrainerFee</p>
+        <p>Monthly price: @Model.MonthlyFee</p>
+        <p>Yearly price: @Model.YearlyFee</p>
+    </div>
+</div>
+
+
+<p class="text-danger">@ViewBag.Error</p>
+<p class="text-success">@ViewBag.Success</p>
+
+<table class="table table-striped table-hover table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Training type</th>
+            <th scope="col">Training length</th>
+            <th scope="col">Max visitors</th>
+            <th scope="col">Trainer</th>
+            <th scope="col">Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var training in trainings)
+        {
+            <tr>
+                <td>@training.Name</td>
+                <td>@training.TrainingType</td>
+                <td>@training.TrainingLength</td>
+                <td>@training.MaxVisitors</td>
+                <td>@training.TrainerUsername</td>
+                <td>@training.TrainingDate</td>
+                <td>
+                    <form action="/GroupTraining/SignUp" method="post">
+                        <input type="hidden" name="groupTrainingId" id="groupTrainingId" value="@training.Id" />
+                        <input type="hidden" name="fitnessCenterId" id="fitnessCenterId" value="@Model.Id" /> 
+                        <input type="submit" class="btn btn-success" value="Sign up" />
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <div class="row">
+        @foreach (var comment in comments)
+        {
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Grade: @comment.Grade</div>
+                    <div class="panel-body">
+                        <p>@comment.CommentText</p>
+                        <p>@comment.VisitorId</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div>
+    <form action="/User/LeaveComment">
+        <div class="form-group">
+            <label for="grade">Grade</label>
+            <input type="number" class="form-control" id="grade" name="grade" placeholder="5" min="0" required/>
+        </div>
+        <div class="form-group">
+            <label for="commentText">Comment</label>
+            <input type="text" class="form-control" id="commentText" name="commentText" placeholder="Your comment goes here" required/>
+        </div>
+        <input type="hidden" name="fitnessCenterId" value="@Model.Id"/>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="Add comment" />
+        </div>
+    </form>
+</div>

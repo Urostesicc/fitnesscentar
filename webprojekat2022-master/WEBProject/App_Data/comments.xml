@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfComment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Comment>
+    <Id>com1</Id>
+    <VisitorId>visitor</VisitorId>
+    <FitnessCenterId>fc1</FitnessCenterId>
+    <CommentText>very good</CommentText>
+    <Grade>5</Grade>
+    <IsApproved>false</IsApproved>
+    <IsDeleted>false</IsDeleted>
+  </Comment>
+  <Comment>
+    <Id>com2</Id>
+    <VisitorId>visitor1</VisitorId>
+    <FitnessCenterId>fc1</FitnessCenterId>
+    <CommentText>badd</CommentText>
+    <Grade>1</Grade>
+    <IsApproved>false</IsApproved>
+    <IsDeleted>false</IsDeleted>
+  </Comment>
+  <Comment>
+    <Id>com3</Id>
+    <VisitorId>visitor1</VisitorId>
+    <FitnessCenterId>fc1</FitnessCenterId>
+    <CommentText>eh</CommentText>
+    <Grade>3</Grade>
+    <IsApproved>false</IsApproved>
+    <IsDeleted>false</IsDeleted>
+  </Comment>
+  <Comment>
+    <Id>com4</Id>
+    <VisitorId>visitor</VisitorId>
+    <FitnessCenterId>fc1</FitnessCenterId>
+    <CommentText>decent</CommentText>
+    <Grade>4</Grade>
+    <IsApproved>true</IsApproved>
+    <IsDeleted>false</IsDeleted>
+  </Comment>
+</ArrayOfComment>

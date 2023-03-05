@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using WEBProject.Models
+@model List<FitnessCenter>
+
+<div class="container-fluid">
+    <hr />
+    <form class="form-inline" action="/Home/FilterCenters" method="post" id="filterForm">
+
+        <div class="form-group">
+            <label for="searchName">Name:</label>
+            <input class="form-control" type="text" placeholder="Name" name="searchName" />
+        </div>
+        <div class="form-group">
+            <label for="searchAddress">Address:</label>
+            <input class="form-control" type="text" placeholder="Address" name="searchAddress" />
+        </div>
+        <div class="form-group">
+            <label for="searchYearMin">Year (min):</label>
+            <input class="form-control" type="number" placeholder="2010" name="searchYearMin" min="0" max="2022" />
+        </div>
+        <div class="form-group">
+            <label for="searchYearMax">Year (max)</label>
+            <input class="form-control" type="number" placeholder="2022" name="searchYearMax" min="0" max="2022" />
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="submit" id="searchButton" value="Search" />
+        </div>
+        <hr />
+        <div class="form-group">
+            <label for="sortOrder">Filter:</label>
+            <select class="form-control" name="sortOrder" id="sortOrder" form="filterForm">
+                <option value="name_asc">Name - ascending</option>
+                <option value="name_desc">Name - descending</option>
+                <option value="address_asc">Address - ascending</option>
+                <option value="address_desc">Address - descending</option>
+                <option value="year_asc">Year - ascending</option>
+                <option value="year_desc">Year - desscending</option>
+            </select>
+        </div>
+    </form>
+
+    <hr />
+    <table class="table table-striped table-hover table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Opened in</th>
+                <th scope="col">Address</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var fc in Model)
+            {
+                <tr>
+                    <td>@fc.Name</td>
+                    <td>@fc.FoundedIn</td>
+                    <td>@fc.Address</td>
+                    <td>
+                        <form action="/FitnessCenter/Details" method="post">
+                            <input type="hidden" name="fitnessCenterId" id="fitnessCenterId" value="@fc.Id" />
+                            <input type="submit" value="Details" />
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "NewFitnessCenter";
+    Layout = "~/Views/Shared/_OwnerLayout.cshtml";
+}
+@using WEBProject.Models
+@model FitnessCenter
+
+<h2>NewFitnessCenter</h2>
+
+<form action="/FitnessCenter/AddFitnessCenter" id="regForm" method="post">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Name" required/>
+    </div>
+    <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" name="address" placeholder="Address" required/>
+    </div>
+    <div class="form-group">
+        <label for="foundedIn">Founded in:</label>
+        <input type="number" class="form-control" id="foundedIn" name="foundedIn" placeholder="2022" min="1900" required/>
+    </div>
+    <div class="form-group">
+        <label for="monthlyFee">Monthly fee</label>
+        <input type="number" class="form-control" id="monthlyFee" name="monthlyFee" min="0" required/>
+    </div>
+    <div class="form-group">
+        <label for="yearlyFee">Yearly fee</label>
+        <input type="number" class="form-control" id="yearlyFee" name="yearlyFee" min="0" required/>
+    </div>
+    <div class="form-group">
+        <label for="singleSessionFee">Single session fee</label>
+        <input type="number" class="form-control" id="singleSessionFee" name="singleSessionFee" min="0" required/>
+    </div>
+    <div class="form-group">
+        <label for="singleSessionTrainerFee">Single session fee (with trainer)</label>
+        <input type="number" class="form-control" id="singleSessionTrainerFee" name="singleSessionTrainerFee" min="0" required/>
+    </div>
+    <div class="form-group">
+        <label for="groupSessionFee">Group session fee</label>
+        <input type="number" class="form-control" id="groupSessionFee" name="groupSessionFee" min="0" required/>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Add fitness center" />
+    </div>
+</form>
+

@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "RegisterTrainer";
+    Layout = "~/Views/Shared/_OwnerLayout.cshtml";
+}
+
+
+
+@using WEBProject.Models
+@model List<FitnessCenter>
+<h2>Register trainer</h2>
+
+<p class="text-danger">@ViewBag.Error</p>
+<form action="/FitnessCenter/RegisterTrainer" id="regForm" method="post">
+    <div class="form-group">
+        <label for="fitnessCenter">Fitness center:</label>
+        <select class="form-control" name="fitnessCenterId" id="fitnessCenterId" form="regForm">
+            @foreach (var fc in Model)
+            {
+                <option value="@fc.Id">@fc.Name</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="Username" required/>
+    </div>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Name" required/>
+    </div>
+    <div class="form-group">
+        <label for="lastname">Lastname</label>
+        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Lastname" required/>
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select class="form-control" name="gender" id="genderForm" form="regForm" >
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other (prefer not to say)</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password" required/>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Register" />
+    </div>
+</form>

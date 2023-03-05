@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <User xsi:type="Trainer">
+    <Username>trainer1-fc1</Username>
+    <Password>trainer123</Password>
+    <Name>Uros</Name>
+    <Lastname>Tesic</Lastname>
+    <Gender>Male</Gender>
+    <IsDeleted>false</IsDeleted>
+    <CanLogin>true</CanLogin>
+    <UserType>Trainer</UserType>
+    <FitnessCenterId>fc1</FitnessCenterId>
+    <TrainingIds>
+      <string>gt1-fc1</string>
+      <string>gt2-fc1</string>
+    </TrainingIds>
+  </User>
+  <User xsi:type="Trainer">
+    <Username>trainer2-fc1</Username>
+    <Password>trainer123</Password>
+    <Name>Uros</Name>
+    <Lastname>Tesic</Lastname>
+    <Gender>Male</Gender>
+    <IsDeleted>false</IsDeleted>
+    <CanLogin>true</CanLogin>
+    <UserType>Trainer</UserType>
+    <FitnessCenterId>fc1</FitnessCenterId>
+    <TrainingIds>
+      <string>gt3-fc1</string>
+      <string>gt4-fc1</string>
+    </TrainingIds>
+  </User>
+  <User xsi:type="Trainer">
+    <Username>trainer1-fc2</Username>
+    <Password>trainer123</Password>
+    <Name>Uros</Name>
+    <Lastname>Tesic</Lastname>
+    <Gender>Male</Gender>
+    <IsDeleted>false</IsDeleted>
+    <CanLogin>true</CanLogin>
+    <UserType>Trainer</UserType>
+    <FitnessCenterId>fc2</FitnessCenterId>
+    <TrainingIds>
+      <string>gt2-fc1</string>
+      <string>gt2-fc2</string>
+    </TrainingIds>
+  </User>
+  <User xsi:type="Trainer">
+    <Username>trainer2-fc2</Username>
+    <Password>trainer123</Password>
+    <Name>Uros</Name>
+    <Lastname>Tesic</Lastname>
+    <Gender>Male</Gender>
+    <IsDeleted>false</IsDeleted>
+    <CanLogin>true</CanLogin>
+    <UserType>Trainer</UserType>
+    <FitnessCenterId>fc2</FitnessCenterId>
+    <TrainingIds>
+      <string>gt2-fc3</string>
+      <string>gt2-fc4</string>
+    </TrainingIds>
+  </User>
+  <User xsi:type="Owner">
+    <Username>owner</Username>
+    <Password>owner123</Password>
+    <Name>Uros</Name>
+    <Lastname>Tesic</Lastname>
+    <Gender>Male</Gender>
+    <IsDeleted>false</IsDeleted>
+    <CanLogin>true</CanLogin>
+    <UserType>Owner</UserType>
+    <OwnedCentersIds />
+  </User>
+  <User xsi:type="Owner">
+    <Username>owner1</Username>
+    <Password>owner123</Password>
+    <Name>Uros</Name>
+    <Lastname>Tesic</Lastname>
+    <Gender>Male</Gender>
+    <IsDeleted>false</IsDeleted>
+    <CanLogin>true</CanLogin>
+    <UserType>Owner</UserType>
+    <OwnedCentersIds />
+  </User>
+  <User xsi:type="Visitor">
+    <Username>visitor</Username>
+    <Password>visitor123</Password>
+    <Name>Uros</Name>
+    <Lastname>Tesic</Lastname>
+    <Gender>Male</Gender>
+    <IsDeleted>false</IsDeleted>
+    <CanLogin>true</CanLogin>
+    <UserType>Visitor</UserType>
+    <TrainingIds>
+      <string>gt1-fc1</string>
+      <string>gt2-fc1</string>
+      <string>gt2-fc4</string>
+    </TrainingIds>
+  </User>
+  <User xsi:type="Visitor">
+    <Username>visitor1</Username>
+    <Password>visitor123</Password>
+    <Name>Uros</Name>
+    <Lastname>Tesic</Lastname>
+    <Gender>Male</Gender>
+    <IsDeleted>false</IsDeleted>
+    <CanLogin>true</CanLogin>
+    <UserType>Visitor</UserType>
+    <TrainingIds>
+      <string>gt1-fc1</string>
+      <string>gt2-fc1</string>
+      <string>gt2-fc1</string>
+      <string>gt2-fc1</string>
+    </TrainingIds>
+  </User>
+  <User xsi:type="Visitor">
+    <Username>visitor2</Username>
+    <Password>visitor123</Password>
+    <Name>Uros</Name>
+    <Lastname>Tesic</Lastname>
+    <Gender>Male</Gender>
+    <IsDeleted>false</IsDeleted>
+    <CanLogin>true</CanLogin>
+    <UserType>Visitor</UserType>
+    <TrainingIds>
+      <string>gt2-fc3</string>
+      <string>gt3-fc1</string>
+    </TrainingIds>
+  </User>
+  <User xsi:type="Visitor">
+    <Username>visitor3</Username>
+    <Password>visitor123</Password>
+    <Name>Uros</Name>
+    <Lastname>Tesic</Lastname>
+    <Gender>Male</Gender>
+    <IsDeleted>false</IsDeleted>
+    <CanLogin>true</CanLogin>
+    <UserType>Visitor</UserType>
+    <TrainingIds>
+      <string>gt3-fc1</string>
+      <string>gt4-fc1</string>
+    </TrainingIds>
+  </User>
+  <User xsi:type="Visitor">
+    <Username>visitor4</Username>
+    <Password>visitor123</Password>
+    <Name>Uros</Name>
+    <Lastname>Tesic</Lastname>
+    <Gender>Male</Gender>
+    <IsDeleted>false</IsDeleted>
+    <CanLogin>true</CanLogin>
+    <UserType>Visitor</UserType>
+    <TrainingIds>
+      <string>gt4-fc1</string>
+      <string>gt2-fc3</string>
+    </TrainingIds>
+  </User>
+  <User xsi:type="Visitor">
+    <Username>visitor5</Username>
+    <Password>visitor123</Password>
+    <Name>Uros</Name>
+    <Lastname>Tesic</Lastname>
+    <Gender>Male</Gender>
+    <IsDeleted>false</IsDeleted>
+    <CanLogin>true</CanLogin>
+    <UserType>Visitor</UserType>
+    <TrainingIds>
+      <string>gt2-fc1</string>
+      <string>gt2-fc2</string>
+      <string>gt2-fc4</string>
+    </TrainingIds>
+  </User>
+  <User xsi:type="Trainer">
+    <Username>novitrener</Username>
+    <Password>asd</Password>
+    <Name>asd</Name>
+    <Lastname>asd</Lastname>
+    <Gender>male</Gender>
+    <IsDeleted>false</IsDeleted>
+    <CanLogin>true</CanLogin>
+    <UserType>Trainer</UserType>
+    <FitnessCenterId>0d253ad2-e706-4679-a7d7-749837ca4aa9</FitnessCenterId>
+    <TrainingIds />
+  </User>
+</ArrayOfUser>

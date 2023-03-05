@@ -1,0 +1,67 @@
+﻿@using WEBProject.Models
+@model User
+
+@{
+    ViewBag.Title = "ModifyAccount";
+    if (Model.UserType == "Owner")
+    {
+        Layout = "~/Views/Shared/_OwnerLayout.cshtml";
+    }
+    if (Model.UserType == "Visitor")
+    {
+        Layout = "~/Views/Shared/_VisitorLayout.cshtml";
+    }
+    if (Model.UserType == "Trainer")
+    {
+        Layout = "~/Views/Shared/_TrainerLayout.cshtml";
+    }
+}
+
+
+
+<h2>Modify account</h2>
+
+<form action="/User/Modify" id="regForm" method="post">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username" value="@Model.Username" required/>
+    </div>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" value="@Model.Name" required/>
+    </div>
+    <div class="form-group">
+        <label for="lastname">Lastname</label>
+        <input type="text" class="form-control" id="lastname" name="lastname" value="@Model.Lastname" required/>
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select class="form-control" name="gender" id="genderForm" form="regForm">
+            @if (Model.Gender == "Male")
+            {
+                <option value="Male" selected>Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other (prefer not to say)</option>
+            }
+            @if (Model.Gender == "Female")
+            {
+                <option value="Male">Male</option>
+                <option value="Female" selected>Female</option>
+                <option value="Other">Other (prefer not to say)</option>
+            }
+            @if (Model.Gender == "Other")
+            {
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other" selected>Other (prefer not to say)</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" value="@Model.Password" required/>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Modify" />
+    </div>
+</form>

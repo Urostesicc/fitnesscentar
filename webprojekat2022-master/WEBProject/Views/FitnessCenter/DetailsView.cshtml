@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "DetailsView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using WEBProject.Models
+@model FitnessCenter
+@{
+     List <GroupTraining> trainings = ViewData["Trainings"] as List<GroupTraining>;
+     List<Comment> comments = ViewData["Comments"] as List<Comment>;
+}
+<div class="panel panel-default">
+    <div class="panel-heading">@Model.Name</div>
+    <div class="panel-body">
+        <p>Address: @Model.Address</p>
+        <p>Single session price: @Model.SingleSessionFee</p>
+        <p>Single session price (with trainer): @Model.SingleSessionTrainerFee</p>
+        <p>Monthly price: @Model.MonthlyFee</p>
+        <p>Yearly price: @Model.YearlyFee</p>
+    </div>
+</div>
+
+
+<table class="table table-striped table-hover table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Training type</th>
+            <th scope="col">Training length</th>
+            <th scope="col">Max visitors</th>
+            <th scope="col">Trainer</th>
+            <th scope="col">Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var training in trainings)
+        {
+            <tr>
+                <td>@training.Name</td>
+                <td>@training.TrainingType</td>
+                <td>@training.TrainingLength</td>
+                <td>@training.MaxVisitors</td>
+                <td>@training.TrainerUsername</td>
+                <td>@training.TrainingDate</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <div class="row">
+        @foreach(var comment in comments)
+        {
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">Grade: @comment.Grade</div>
+                <div class="panel-body">
+                    <p>@comment.CommentText</p>
+                    <p>@comment.VisitorId</p>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>

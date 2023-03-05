@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Comments";
+    Layout = "~/Views/Shared/_OwnerLayout.cshtml";
+}
+
+<h2>Comments</h2>
+@using WEBProject.Models
+@model List<Comment>
+
+
+<div>
+    <div class="row">
+        @foreach (var comment in Model)
+        {
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Grade: @comment.Grade</div>
+                    <div class="panel-body">
+                        <p>Username: @comment.VisitorId</p>
+                        <p>Text: @comment.CommentText</p>
+                    </div>
+                    <div class="panel-footer">
+                        @if(@comment.IsApproved){
+                            <p class="text-success">Comment approved</p>
+                        }
+                        else{
+                            <form action="/FitnessCenter/ApproveComment" method="post">
+                                <input type="hidden" name="commentId" id="commentId" value="@comment.Id" />
+                                <input type="submit" class="btn btn-success" value="Approve" />
+                            </form>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
